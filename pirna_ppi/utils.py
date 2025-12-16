@@ -2,10 +2,11 @@ from pathlib import Path
 import subprocess
 
 def run_cmd(cmd: str, outputs: list[Path]):
-    outputs = [Path(o) for o in outputs]
-
-    if all(o.exists() for o in outputs):
-        print("⏭️ output exists, skip")
-        return
+    for o in outputs:
+        if o.exists():
+            print(f"⏭️ {o} exists, skip")
+            return
+        else:
+            o.parent.mkdir(parents=True, exist_ok=True)
 
     subprocess.run(cmd, shell=True, check=True)
