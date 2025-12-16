@@ -1,7 +1,7 @@
 from pathlib import Path
 import subprocess
 
-def run_cmd(cmd: str, outputs: list[str]):
+def run_cmd(cmd: str, outputs: list[Path]):
     outputs = [Path(o) for o in outputs]
 
     if all(o.exists() for o in outputs):

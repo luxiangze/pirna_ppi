@@ -13,6 +13,7 @@ tqdm = "*"
 typer = "*"
 pip = "*"
 biopython = ">=1.86,<2"
+ipykernel = ">=7.1.0,<8"
 
 [pypi-dependencies]
 mkdocs = "*"
