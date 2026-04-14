@@ -1,6 +1,10 @@
 # Data
 /data/
 
+# software
+/RoseTTAFold2-PPI/
+/DPAM/
+
 # Mac OS-specific storage files
 .DS_Store
 
