@@ -16,6 +16,8 @@ ipykernel = ">=7.1.0,<8"
 mmseqs2 = ">=18.8cc5c,<19"
 hmmer = ">=3.4,<4"
 aria2 = ">=1.37.0,<2"
+pyreadr = ">=0.5.4,<0.6"
+joblib = ">=1.5.3,<2"
 
 [pypi-dependencies]
 mkdocs = "*"
@@ -23,3 +25,5 @@ python-dotenv = "*"
 pirna_ppi = { path = ".", editable = true }
 colabfold = { git = "https://github.com/sokrypton/ColabFold" }
 biopython = "<1.86"
+polars = ">=1.0.0"
+numpy = ">=1.24.0"
