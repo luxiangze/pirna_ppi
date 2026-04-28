@@ -1,6 +1,5 @@
 from pathlib import Path
 import subprocess
-import os
 from Bio import SeqIO
 
 def run_cmd(cmd: str, outputs: list[Path], force: bool = False):
