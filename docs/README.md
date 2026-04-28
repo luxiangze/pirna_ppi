@@ -1,12 +1,38 @@
-Generating the docs
-----------
+# Documentation
 
-Use [mkdocs](http://www.mkdocs.org/) structure to update the documentation. 
+This directory contains the MkDocs documentation for the piRNA PPI project.
+It is intended to build from a normal GitHub clone, even when large data files
+and external tool checkouts are not present.
 
-Build locally with:
+## Source Files
 
-    mkdocs build
+- `docs/mkdocs.yml`: MkDocs configuration.
+- `docs/docs/index.md`: documentation landing page.
+- `docs/docs/getting-started.md`: Chinese onboarding guide for new lab members.
 
-Serve locally with:
+Top-level project summaries live outside this directory:
 
-    mkdocs serve
+- `README.md`: English peer-facing project overview.
+- `README.zh-CN.md`: Chinese version with matching structure and content.
+
+## Build Locally
+
+From the repository root:
+
+```bash
+pixi run mkdocs build -f docs/mkdocs.yml
+```
+
+The generated site is written to `docs/site/`, which is ignored by Git.
+The build does not require `data/`, sequence databases, DPAM outputs, or
+RoseTTAFold2-PPI outputs.
+
+## Preview Locally
+
+From the repository root:
+
+```bash
+pixi run mkdocs serve -f docs/mkdocs.yml
+```
+
+MkDocs will print a local URL for previewing the documentation in a browser.
