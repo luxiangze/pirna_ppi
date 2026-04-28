@@ -5,6 +5,9 @@
 /RoseTTAFold2-PPI/
 /DPAM/
 
+# test
+/test/**/outputs
+
 # Mac OS-specific storage files
 .DS_Store
 
